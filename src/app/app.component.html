@@ -1,0 +1,13 @@
+
+<div class="fixed-header" *ngIf="islogedIn==true">
+  <div class="container">
+      <nav>
+          <a routerLink="/home">Home</a>
+          <a routerLink="/employee">Details</a>
+          <a (click)="logOut()" href="javascripti=void(0)">Logout</a>
+      </nav>
+  </div>
+</div>
+
+<app-login *ngIf="islogedIn==false" (isloggedinclick)="(loginSubmit($event))"></app-login>
+<router-outlet *ngIf="islogedIn==true"></router-outlet>

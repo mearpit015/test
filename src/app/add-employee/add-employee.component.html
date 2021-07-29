@@ -1,0 +1,32 @@
+<form [formGroup]="empform" (ngSubmit)="onSubmit()" novalidate>
+   <input type="hidden" formControlName="id">
+  <label for="first-name">First Name: </label>
+  <input id="first-name"
+   type="text" formControlName="firstName">
+   <!-- <div
+    *ngIf="!firstName?.valid && (firstName?.dirty
+    ||firstName?.touched)">
+    <div [hidden]="!firstName?.errors?.required">
+      First Name is required
+    </div>
+    <div [hidden]="!firstName?.errors?.minlength">
+      Min Length is 10
+    </div>
+  </div> -->
+
+  <label for="last-name">Last Name: </label>
+  <input id="last-name" type="text"
+  formControlName="lastName">
+
+
+  <label for="last-name">Email: </label>
+  <input id="last-name" type="text"
+  formControlName="email">
+
+
+  <label for="last-name">Department: </label>
+  <input id="last-name" type="text"
+  formControlName="department">
+
+  <button [disabled]="!empform.valid" class="add-submit-button" mat-flat-button color="Basic">Submit</button>
+</form>

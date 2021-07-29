@@ -1,0 +1,7 @@
+.add-submit-button{
+  margin: 0 0 0 20px;
+}
+
+form .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}

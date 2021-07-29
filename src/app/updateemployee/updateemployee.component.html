@@ -1,0 +1,25 @@
+<form [formGroup]="empform" (ngSubmit)="onSubmit()" novalidate>
+  <mat-form-field appearance="fill">
+  <input type="hidden" formControlName="id">
+  <mat-label>Enter your firstname</mat-label>
+ <input id="first-name" matInput
+  type="text" formControlName="firstName">
+</mat-form-field>
+<mat-form-field appearance="fill">
+ <mat-label >Enter your lastName </mat-label>
+ <input id="last-name" matInput type="text"
+ formControlName="lastName">
+</mat-form-field>
+<mat-form-field appearance="fill">
+ <mat-label>Enter your email</mat-label>
+ <input id="last-name" matInput type="text"
+ formControlName="email">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Enter your department: </mat-label>
+ <input id="last-name" matInput type="text"
+ formControlName="department">
+</mat-form-field>
+ <button [disabled]="!empform.valid" class="update-submit-button" mat-flat-button color="Basic">Submit</button>
+
+</form>
