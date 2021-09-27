@@ -9,5 +9,7 @@
   </div>
 </div>
 
+
+
 <app-login *ngIf="islogedIn==false" (isloggedinclick)="(loginSubmit($event))"></app-login>
 <router-outlet *ngIf="islogedIn==true"></router-outlet>

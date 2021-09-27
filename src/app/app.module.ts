@@ -16,6 +16,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button'
 import {MatInputModule} from '@angular/material/input'
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ReduxConceptsComponent } from './redux-concepts/redux-concepts.component';
+import { appStoreProviders } from './redux-provider/appstore';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     EmployeeComponent,
 
     UpdateemployeeComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    ReduxConceptsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatFormFieldModule
 
   ],
-  providers: [],
+  providers: [appStoreProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
